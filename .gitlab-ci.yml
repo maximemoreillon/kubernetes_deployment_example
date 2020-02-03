@@ -2,11 +2,14 @@ stages:
   - containerization
   - deployment
 
+variables:
+  DOCKER_IMAGE: 192.168.179.5000/kubernetes-deployment-example:latest
+
 containerization:
   stage: containerization
   script:
-    - docker build -t 192.168.179.5000/kubernetes-deployment-example:latest .
-    - docker push 192.168.179.5000/kubernetes-deployment-example:latest
+    - docker build -t $DOCKER_IMAGE .
+    - docker push $DOCKER_IMAGE
 
 deployment:
   stage: deployment

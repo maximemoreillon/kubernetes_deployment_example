@@ -1,7 +1,7 @@
 # Base image on node
 FROM node:10
 
-# Create app directory
+# Create app directory and move into it
 WORKDIR /usr/src/app
 
 # Copy all files into container
