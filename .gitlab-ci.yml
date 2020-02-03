@@ -6,3 +6,4 @@ stuff:
   stage: stuff
   script:
     - pwd
+    - ls
