@@ -5,12 +5,7 @@ stages:
 stuff:
   stage: stuff
   script:
-    - pwd
     - ls
-    - docker version
-    - docker ps
-    - echo $KUBE_URL
-    - echo $KUBE_TOKEN
     - kubectl cluster-info
   environment:
     name: staging
