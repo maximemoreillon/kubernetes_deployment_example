@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Containerized application</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Example containerized application</h1>
+
+      <table>
+        <tr>
+          <td>Hostname</td>
+          <td><%= hostname %></td>
+        </tr>
+        <% for(var networkInterface in networkInterfaces()){ %>
+        <tr>
+          <td><%= networkInterface %></td>
+          <td><% networkInterfaces()[networkInterface].find(e => {return e.family === 'IPv4'}) %></td>
+        </tr>
+        <% } %>
+
+      </table>
+    </div>
+
+
+
+  </body>
+</html>
