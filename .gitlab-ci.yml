@@ -14,4 +14,3 @@ stuff:
     - kubectl cluster-info
   environment:
     name: staging
-    url: https://staging.maximemoreillon.com
