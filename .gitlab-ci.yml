@@ -10,3 +10,4 @@ stuff:
     - docker version
     - docker ps
     - echo $KUBE_URL
+    - echo $KUBE_TOKEN
