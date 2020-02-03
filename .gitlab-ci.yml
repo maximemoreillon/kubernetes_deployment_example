@@ -6,6 +6,6 @@ stuff:
   stage: stuff
   script:
     - ls
-    - kubectl cluster-info
+    - kubectl apply -f deployment.yaml
   environment:
     name: staging
