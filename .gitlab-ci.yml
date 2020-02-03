@@ -1,10 +1,16 @@
 stages:
-  - stuff
+  - containerization
+  - deployment
 
-stuff:
-  stage: stuff
+containerization:
+  stage: containerization
   script:
-    - ls
+    - docker build -t 192.168.179.5000/kubernetes-deployment-example:latest .
+    - docker push 192.168.179.5000/kubernetes-deployment-example:latest
+
+deployment:
+  stage: deployment
+  script:
     - kubectl apply -f deployment.yaml
   environment:
     name: staging

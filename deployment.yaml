@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: redblack
-        image: moreillon/kubernetes_deployment_example:1
+        image: 192.168.179.5000/kubernetes-deployment-example:latest
         ports:
         - containerPort: 12345
 ---
@@ -27,7 +27,7 @@ metadata:
 spec:
   ports:
   - port: 12345
-    nodePort: 30111
+    nodePort: 30112
   selector:
     app: example-deployment
   type: LoadBalancer
