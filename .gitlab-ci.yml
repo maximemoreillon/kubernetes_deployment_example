@@ -1,0 +1,8 @@
+stages:
+  - stuff
+
+
+stuff:
+  stage: stuff
+  script:
+    - pwd
