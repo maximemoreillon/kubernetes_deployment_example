@@ -9,4 +9,4 @@ stuff:
     - ls
     - docker version
     - docker ps
-    - kubectl get nodes
+    - echo $KUBE_URL
