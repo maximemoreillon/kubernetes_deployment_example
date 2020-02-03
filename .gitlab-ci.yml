@@ -8,4 +8,5 @@ stuff:
     - pwd
     - ls
     - docker version
+    - docker ps
     - kubectl get nodes
