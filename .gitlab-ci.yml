@@ -11,3 +11,6 @@ stuff:
     - docker ps
     - echo $KUBE_URL
     - echo $KUBE_TOKEN
+  environment:
+    name: staging
+    url: https://staging.maximemoreillon.com
