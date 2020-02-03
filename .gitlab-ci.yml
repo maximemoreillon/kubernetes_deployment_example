@@ -7,4 +7,5 @@ stuff:
   script:
     - pwd
     - ls
-    - kubectl
+    - docker version
+    - kubectl get nodes
