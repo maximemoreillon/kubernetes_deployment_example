@@ -15,5 +15,6 @@ deployment:
   stage: deployment
   script:
     - kubectl apply -f deployment.yaml
+    - kubectl set image deployment/example-deployment example-container=$DOCKER_IMAGE
   environment:
     name: staging

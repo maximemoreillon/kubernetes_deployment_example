@@ -13,7 +13,7 @@ spec:
         app: example-deployment
     spec:
       containers:
-      - name: example
+      - name: example-container
         image: 172.16.98.151:5000/kubernetes-deployment-example
         imagePullPolicy: Always
         ports:
