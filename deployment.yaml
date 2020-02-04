@@ -15,6 +15,7 @@ spec:
       containers:
       - name: redblack
         image: 192.168.179.25:5000/kubernetes-deployment-example:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 12345
 ---
