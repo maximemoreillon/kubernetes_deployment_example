@@ -7,19 +7,29 @@
   </head>
   <body>
     <div class="wrapper">
-      <h1>Example containerized application</h1>
+      <div class="title">Example containerized application</div>
 
       <table>
+        <tr>
+          <td>Version</td>
+          <td>1.0.0</td>
+        </tr>
         <tr>
           <td>Hostname</td>
           <td><%= hostname %></td>
         </tr>
-        <% for(var networkInterface in networkInterfaces()){ %>
+        <%
+        for(var networkInterface in networkInterfaces()){
+          if(networkInterfaces()[networkInterface][0].family === "IPv4"){
+        %>
         <tr>
           <td><%= networkInterface %></td>
-          <td><% networkInterfaces()[networkInterface].find(e => {return e.family === 'IPv4'}) %></td>
+          <td><%= networkInterfaces()[networkInterface][0].address %></td>
         </tr>
-        <% } %>
+        <%
+          }
+        }
+        %>
 
       </table>
     </div>

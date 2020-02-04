@@ -12,6 +12,4 @@ app.get('/', (req, res) => {
   res.render('index.ejs', os)
 })
 
-console.log(os.networkInterfaces().enp2s0)
-
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
