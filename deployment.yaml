@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: example-deployment
 spec:
-  replicas: 10
+  replicas: 3
   selector:
     matchLabels:
       app: example-deployment
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: example
-        image: 192.168.179.25:5000/kubernetes-deployment-example:8
+        image: 172.16.98.151:5000/kubernetes-deployment-example
         imagePullPolicy: Always
         ports:
         - containerPort: 12345
