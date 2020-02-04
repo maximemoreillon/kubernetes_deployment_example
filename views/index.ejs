@@ -20,7 +20,7 @@
         </tr>
         <%
         for(var networkInterface in networkInterfaces()){
-          if(networkInterfaces()[networkInterface][0].family === "IPv4"){
+          if(networkInterface === "eth0"){
         %>
         <tr>
           <td><%= networkInterface %></td>
