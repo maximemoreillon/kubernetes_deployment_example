@@ -3,7 +3,7 @@ stages:
   - deployment
 
 variables:
-  DOCKER_IMAGE: 192.168.179.25:5000/kubernetes-deployment-example:7
+  DOCKER_IMAGE: 192.168.179.25:5000/kubernetes-deployment-example:8
 
 containerization:
   stage: containerization
