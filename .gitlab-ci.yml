@@ -3,7 +3,7 @@ stages:
   - deployment
 
 variables:
-  DOCKER_IMAGE: 172.16.98.151:5000/kubernetes-deployment-example:latest
+  DOCKER_IMAGE: 172.16.98.151:5000/kubernetes-deployment-example
   DEPLOYENT: example-deployment
 
 containerization:
