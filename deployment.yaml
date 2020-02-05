@@ -14,7 +14,6 @@ spec:
     spec:
       containers:
       - name: example-container
-        image: 172.16.98.151:5000/kubernetes-deployment-example:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 12345

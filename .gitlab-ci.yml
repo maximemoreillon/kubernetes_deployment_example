@@ -4,6 +4,7 @@ stages:
 
 variables:
   DOCKER_IMAGE: 172.16.98.151:5000/kubernetes-deployment-example:latest
+  DEPLOYENT: example-deployment
 
 containerization:
   stage: containerization
@@ -15,6 +16,6 @@ deployment:
   stage: deployment
   script:
     - kubectl apply -f deployment.yaml
-    - kubectl rollout restart deployment/example-deployment
+    - kubectl rollout restart deployment/${DEPLOYENT}
   environment:
     name: staging
