@@ -1,6 +1,6 @@
 # Base image on node
-# FROM node:10
-FROM arm64v8/node:10
+FROM node:10
+# FROM arm64v8/node:10
 
 # Create app directory and move into it
 WORKDIR /usr/src/app
