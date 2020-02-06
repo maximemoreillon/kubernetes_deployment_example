@@ -7,6 +7,9 @@ variables:
   DOCKER_IMAGE: kubernetes-deployment-example
   DEPLOYMENT: example-deployment
 
+before_script:
+  - docker login -u $DOCKER_USERNAMR -p $DOCKER_PASSWORD
+
 containerization:
   stage: containerization
   script:
