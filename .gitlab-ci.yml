@@ -3,7 +3,8 @@ stages:
   - deployment
 
 variables:
-  DOCKER_IMAGE: 172.16.98.151:5000/kubernetes-deployment-example
+  # DOCKER_IMAGE: 172.16.98.151:5000/kubernetes-deployment-example
+  DOCKER_IMAGE: kubernetes-deployment-example
   DEPLOYMENT: example-deployment
 
 containerization:
@@ -11,6 +12,7 @@ containerization:
   script:
     - docker build -t ${DOCKER_IMAGE} .
     - docker push ${DOCKER_IMAGE}
+    - docker image rm ${DOCKER_IMAGE}
 
 deployment:
   stage: deployment
