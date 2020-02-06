@@ -8,7 +8,8 @@ variables:
   DEPLOYMENT: example-deployment
 
 before_script:
-  - docker login -u $DOCKER_USERNAMR -p $DOCKER_PASSWORD
+  - echo
+  - docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
 
 containerization:
   stage: containerization
