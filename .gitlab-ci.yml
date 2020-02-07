@@ -3,12 +3,10 @@ stages:
   - deployment
 
 variables:
-  # DOCKER_IMAGE: 172.16.98.151:5000/kubernetes-deployment-example
   DOCKER_IMAGE: moreillon/kubernetes-deployment-example
   DEPLOYMENT: example-deployment
 
 before_script:
-  - echo
   - docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
 
 containerization:
