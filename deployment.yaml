@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: example-container
-        image: moreillon/kubernetes-deployment-example
+        image: 172.16.98.151:5000/kubernetes-deployment-example
         imagePullPolicy: Always
         ports:
         - containerPort: 12345
